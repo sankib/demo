@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/verification_title"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy"
+        android:layout_above="@+id/verification_info"
+
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="60dp"
+        android:text="Enter verification code "
+        android:textColor="@color/black"
+        android:textSize="28dp" />
+
+    <TextView
+        android:id="@+id/verification_info"
+        android:layout_width="335dp"
+        android:layout_height="54dp"
+        android:fontFamily="@font/gilroyr"
+        android:layout_above="@+id/verification_heading"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="30dp"
+        android:text="Please enter the verification code we sent to your mobile (+254) 123 456 789"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/verification_heading"
+        android:layout_width="113dp"
+        android:layout_height="17dp"
+        android:fontFamily="@font/gilroyr"
+        android:layout_above="@+id/plain_text_input"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="15dp"
+        android:text="Verification Code"
+        android:textColor="@color/black" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/plain_text_input"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeColor="#FFF"
+        app:boxBackgroundColor="#FFF"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="305dp"
+        android:layout_above="@+id/verify_button"
+        android:background="@drawable/edit_text_border"
+        android:fontFamily="@font/gilroyr"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="335dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/edit_text_border"
+
+
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/verify_button"
+        android:layout_width="335dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="67dp"
+        android:background="@drawable/edit_button_border"
+        android:text="Verify"
+        app:backgroundTint="@color/blue"
+        android:fontFamily="@font/gilroyr"/>
+
+
+</RelativeLayout>

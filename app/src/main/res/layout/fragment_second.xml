@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="334dp"
+        android:layout_height="42dp"
+        android:layout_above="@+id/new_password_label"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="60dp"
+        android:text="Change your password "
+        android:fontFamily="@font/gilroy"
+        android:textColor="@color/black"
+        android:textSize="28dp" />
+
+    <TextView
+        android:id="@+id/new_password_label"
+        android:layout_width="96dp"
+        android:layout_height="17dp"
+        android:layout_above="@+id/layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="15dp"
+        android:text="New Password"
+        android:fontFamily="@font/gilroyr"
+        android:textColor="@color/black" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeColor="#FFF"
+        app:boxBackgroundColor="#FFF"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/change_password_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="305dp"
+        android:background="@drawable/edit_text_border"
+        app:startIconDrawable="@drawable/lock"
+        android:fontFamily="@font/gilroyr"
+        android:drawableEnd="@drawable/eye" >
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="335dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/edit_text_border"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/change_password_button"
+        android:layout_width="335dp"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="58dp"
+        android:background="@drawable/edit_button_border"
+        android:gravity="center"
+        android:text="Change Password"
+        app:backgroundTint="@color/blue"
+        android:fontFamily="@font/gilroyr"/>
+
+
+
+</RelativeLayout>
