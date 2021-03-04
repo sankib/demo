@@ -48,15 +48,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/resend_code"
-        android:layout_marginBottom="233dp"
+        android:layout_marginBottom="205dp"
+        android:backgroundTint="@color/white"
         android:cursorVisible="true"
         android:fontFamily="@font/gilroyr"
+        android:inputType="number"
+        android:textColor="@color/blue"
         app:itemCount="5"
         app:itemRadius="10dp"
         app:itemSpacing="18dp"
-        android:inputType="number"
-        app:lineColor="@color/blue"
-        android:backgroundTint="@color/white"/>
+        app:lineColor="@color/blue" />
 
     <TextView
         android:id="@+id/resend_code"
