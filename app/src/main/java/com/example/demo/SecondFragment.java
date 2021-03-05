@@ -23,12 +23,13 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        view.findViewById(R.id.change_password_button).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.verify_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
+                        .navigate(R.id.action_SecondFragment_to_ThirdFragment);
             }
         });
     }
+
 }
