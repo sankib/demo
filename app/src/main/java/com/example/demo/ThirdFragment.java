@@ -26,6 +26,7 @@ public class ThirdFragment extends Fragment {
         view.findViewById(R.id.change_password_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(R.id.action_ThirdFragment_to_FirstFragment);
             }

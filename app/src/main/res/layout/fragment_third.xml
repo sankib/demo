@@ -34,7 +34,6 @@
         android:text="New Password"
         android:textFontWeight="600"
         android:textColor="@color/black" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/confirm_new_password_input"
         app:boxStrokeWidth="0dp"
@@ -61,7 +60,6 @@
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <TextView
         android:id="@+id/confirm_new_password_label"
         android:layout_width="wrap_content"
@@ -74,7 +72,6 @@
         android:text="Confirm New Password"
         android:textFontWeight="600"
         android:textColor="@color/black" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/new_password_input"
         app:boxStrokeWidth="0dp"
