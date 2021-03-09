@@ -3,4 +3,5 @@
     <style name="input_color">
         <item name="android:textColor">@color/black</item>
     </style>
+
 </resources>

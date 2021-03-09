@@ -50,7 +50,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/resend_code"
         android:layout_marginBottom="205dp"
-        android:backgroundTint="@color/white"
         android:cursorVisible="true"
         android:fontFamily="@font/gilroyr"
         android:inputType="number"
