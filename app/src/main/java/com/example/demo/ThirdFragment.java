@@ -23,7 +23,7 @@ public class ThirdFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_third, container, false);
         final TextInputEditText pass = (TextInputEditText) v.findViewById(R.id.newPasswordText);
-        final Button button =(Button) v.findViewById(R.id.change_password_button);
+        final Button button = (Button) v.findViewById(R.id.change_password_button);
        final TextInputEditText passcon = (TextInputEditText) v.findViewById(R.id.confirmPasswordText);
         final TextView passerror = (TextView) v.findViewById(R.id.passwordError);
         final TextView conpasserror = (TextView) v.findViewById(R.id.confirmPasswordError);
@@ -35,7 +35,7 @@ public class ThirdFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
 //        super.onViewCreated(view, savedInstanceState);
 
-            view.findViewById(R.id.change_password_button).setOnClickListener(new View.OnClickListener() {
+        change_password_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
