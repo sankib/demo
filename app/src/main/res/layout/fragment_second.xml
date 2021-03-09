@@ -5,75 +5,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SecondFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginHorizontal="38dp">
+
 
     <TextView
-        android:id="@+id/forgot_password"
-        android:layout_width="334dp"
-        android:layout_height="42dp"
-        android:layout_above="@+id/new_password_label"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="60dp"
-        android:text="Change your password "
+        android:id="@+id/enter_verification_heading"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/gilroy"
+        android:layout_above="@+id/enter_verification_info"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:text="Enter verification code "
         android:textColor="@color/black"
         android:textSize="28dp" />
 
     <TextView
-        android:id="@+id/new_password_label"
-        android:layout_width="96dp"
-        android:layout_height="17dp"
-        android:layout_above="@+id/layout"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="15dp"
-        android:text="New Password"
+        android:id="@+id/enter_verification_info"
+        android:layout_width="335dp"
+        android:layout_height="54dp"
         android:fontFamily="@font/gilroyr"
+        android:layout_above="@+id/verification_code_heading"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="61dp"
+        android:text="Please enter the verification code we sent to your mobile (+254) 123 456 789"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/verification_code_heading"
+        android:layout_width="113dp"
+        android:layout_height="17dp"
+        android:fontFamily="@font/gilroyr"
+        android:layout_above="@+id/verification_code_input"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="17dp"
+        android:text="Verification Code"
+        android:textFontWeight="600"
         android:textColor="@color/black" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:boxStrokeColor="#FFF"
-        app:boxBackgroundColor="#FFF"
-        android:layout_width="335dp"
-        android:layout_height="50dp"
-        android:layout_above="@+id/change_password_button"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="305dp"
-        android:background="@drawable/edit_text_border"
-        app:startIconDrawable="@drawable/lock"
+    <com.chaos.view.PinView
+        android:id="@+id/verification_code_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/resend_code"
+        android:layout_marginBottom="205dp"
+        android:cursorVisible="true"
         android:fontFamily="@font/gilroyr"
-        android:drawableEnd="@drawable/eye" >
+        android:inputType="number"
+        android:textColor="@color/blue"
+        app:itemCount="5"
+        app:itemRadius="10dp"
+        app:itemSpacing="18dp"
+        app:lineColor="@color/blue" />
 
-        <com.google.android.material.textfield.TextInputEditText
+    <TextView
+        android:id="@+id/resend_code"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroyr"
+        android:layout_above="@+id/verify_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="58dp"
+        android:text="Resend code "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
 
-            android:layout_width="335dp"
-            android:layout_height="50dp"
-            android:layout_alignParentStart="true"
-            android:background="@drawable/edit_text_border"
-            android:inputType="number" />
-    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/change_password_button"
-        android:layout_width="335dp"
+        android:id="@+id/verify_button"
+        android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="58dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="66dp"
         android:background="@drawable/edit_button_border"
-        android:gravity="center"
-        android:text="Change Password"
-        app:backgroundTint="@color/blue"
-        android:fontFamily="@font/gilroyr"/>
-
+        android:fontFamily="@font/gilroyr"
+        android:text="Verify"
+        app:backgroundTint="@color/blue" />
 
 
 </RelativeLayout>

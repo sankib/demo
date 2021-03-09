@@ -5,18 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstFragment"
+    android:layout_marginHorizontal="38dp"
     android:orientation="vertical">
 
 
     <TextView
-        android:id="@+id/forgot_password"
-        android:layout_width="300dp"
-        android:layout_height="48dp"
-
-        android:layout_above="@+id/info"
+        android:id="@+id/forgot_password_heading"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/phone_number_info"
         android:layout_alignParentStart="true"
-
-        android:layout_marginStart="38dp"
         android:layout_marginBottom="50dp"
         android:fontFamily="@font/gilroy"
         android:text="Forgot password "
@@ -24,55 +22,54 @@
         android:textSize="28dp" />
 
     <TextView
-        android:id="@+id/info"
+        android:id="@+id/phone_number_info"
         android:layout_width="335dp"
         android:layout_height="55dp"
         android:fontFamily="@font/gilroyr"
-        android:layout_above="@+id/number_heading"
+        android:layout_above="@+id/phone_number_heading"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="38dp"
         android:layout_marginBottom="30dp"
         android:text="Please enter your phone number to change your password"
         android:textSize="16dp" />
 
     <TextView
-        android:id="@+id/number_heading"
+        android:id="@+id/phone_number_heading"
         android:layout_width="96dp"
         android:layout_height="17dp"
         android:fontFamily="@font/gilroyr"
-        android:layout_above="@+id/plain_text_input"
+        android:layout_above="@+id/phone_number"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="38dp"
         android:layout_marginBottom="15dp"
         android:text="Phone Number"
+        android:textFontWeight="600"
         android:textColor="@color/black" />
-<com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/plain_text_input"
-    app:boxStrokeWidth="0dp"
-    app:boxStrokeWidthFocused="0dp"
-    app:boxStrokeColor="#FFF"
-    app:boxBackgroundColor="#FFF"
-    android:layout_width="335dp"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="38dp"
-    android:layout_marginBottom="305dp"
-    android:layout_above="@+id/continue_button"
-    android:background="@drawable/edit_text_border"
-    app:startIconDrawable="@drawable/phone"
-    android:gravity="center_vertical"
-    android:fontFamily="@font/gilroyr"
-    >
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="335dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/edit_text_border"
-        android:textAlignment="center"
-        android:ellipsize="end"
-        android:gravity="center"
 
-        android:inputType="number" />
-</com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone_number"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeColor="#FFF"
+        app:boxBackgroundColor="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="305dp"
+        android:layout_above="@+id/continue_button"
+        android:background="@drawable/edit_text_border"
+        app:startIconDrawable="@drawable/phone"
+        app:startIconTint="@color/blue"
+        android:fontFamily="@font/gilroyr"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@android:color/transparent"
+            android:inputType="number"
+            android:padding="0dp"
+            android:textColor="@color/gray" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/continue_button"
         android:layout_width="335dp"
@@ -80,11 +77,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="38dp"
         android:layout_marginBottom="67dp"
         android:background="@drawable/edit_button_border"
         android:text="Continue"
+        android:textAllCaps="false"
         android:fontFamily="@font/gilroyr"
         app:backgroundTint="@color/blue" />
 
