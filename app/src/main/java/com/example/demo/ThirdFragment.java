@@ -22,14 +22,33 @@ public class ThirdFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_third, container, false);
-        final TextInputEditText pass = (TextInputEditText) v.findViewById(R.id.newPasswordText);
-        final Button button = (Button) v.findViewById(R.id.change_password_button);
-       final TextInputEditText passcon = (TextInputEditText) v.findViewById(R.id.confirmPasswordText);
-        final TextView passerror = (TextView) v.findViewById(R.id.passwordError);
-        final TextView conpasserror = (TextView) v.findViewById(R.id.confirmPasswordError);
+        pass = (TextInputEditText) v.findViewById(R.id.newPasswordText);
+        change_password_button = (Button) v.findViewById(R.id.change_password_button);
+        passcon = (TextInputEditText) v.findViewById(R.id.confirmPasswordText);
+        passerror = (TextView) v.findViewById(R.id.passwordError);
+        conpasserror = (TextView) v.findViewById(R.id.confirmPasswordError);
         return v;
 
 
+    }
+    private boolean validatePassword() {
+        String passI = (String)pass.getText().toString();
+        String passconI=(String) passcon.getText().toString().trim();
+        if (passI.isEmpty()) {
+            passerror.setText("Field can't be empty");
+            return false;
+        }  if (passI.length()<5) {
+            passerror.setText("Password must be at least 5 characters");
+            return false;
+        }
+        if (passI.equals(passconI)) {
+            conpasserror.setText("Password Matched");
+
+            return false;
+        }else {
+            conpasserror.setText("Password Would Not be matched");
+            return true;
+        }
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -38,35 +57,18 @@ public class ThirdFragment extends Fragment {
         change_password_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
                     validatePassword();
+//                    if(validatePassword()==true){
 //                    NavHostFragment.findNavController(ThirdFragment.this)
-//                            .navigate(R.id.action_ThirdFragment_to_FirstFragment);
+//                            .navigate(R.id.action_ThirdFragment_to_FirstFragment);}
                 }
 
             });
         }
 
-    private boolean validatePassword() {
-        String passI = (String)pass.getText().toString();
-       String passconI=(String) passcon.getText().toString().trim();
-        if (passI.isEmpty()) {
-            passerror.setText("Field can't be empty");
-            return false;
-        }  if (passI.length()<5) {
-            passerror.setText("Password must be at least 5 characters");
-            return false;
-        }
-        if (!passI.equals(passconI)) {
-            conpasserror.setText("Password Would Not be matched");
-            return false;
-        }else {
-            conpasserror.setText("Password Matched");
-            return true;
-        }
-    }
 
 }
+
 
 
 //            pass.getText().toString().trim();
