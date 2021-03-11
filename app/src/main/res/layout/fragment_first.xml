@@ -61,9 +61,10 @@
         >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fpInput"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:maxLength="13"
             android:background="@android:color/transparent"
             android:inputType="number"
             android:padding="0dp"
